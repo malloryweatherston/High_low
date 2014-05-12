@@ -1,9 +1,28 @@
 <?php
 
 //computer picks random number between 1 and 100
-$min = 1;
-$max = 100;
-int rand ( int $min , int $max );
+$number = rand (1 , 100); 
 
 //Ask user to guess a number between 1 and 100
-fwrite(STDOUT, 'Guess a number between 1 and 100.');
+fwrite(STDOUT, 'Guess a number between 1 and 100');
+
+//Get the input from the user 
+$guess = fgets(STDIN); 
+
+while ($guess != $number) {
+	if ($guess > $number) {
+	  fwrite(STDOUT, "LOWER\n");
+	  $guess = fgets(STDIN); 
+
+} elseif ($guess < $number) {
+	  fwrite(STDOUT, "HIGHER\n");
+	  $guess = fgets(STDIN); 
+ }
+}
+fwrite(STDOUT, "GOOD GUESS!\n");
+
+
+
+
+
+
