@@ -4,7 +4,7 @@
 $number = rand (1 , 100); 
 
 //count variable
-$number_of_guesses = 0;
+$number_of_guesses = 1;
 
 //Ask user to guess a number between 1 and 100
 fwrite(STDOUT, 'Guess a number between 1 and 100');
@@ -26,8 +26,3 @@ while ($guess != $number) {
  $number_of_guesses++;
 }
 fwrite(STDOUT, "GOOD GUESS! You guessed correctly in $number_of_guesses guesses!\n");
-
-
-
-
-
