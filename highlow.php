@@ -9,6 +9,7 @@ fwrite(STDOUT, 'Guess a number between 1 and 100');
 //Get the input from the user 
 $guess = fgets(STDIN); 
 
+//Test to see if user's guess is too high, too low, or correct 
 while ($guess != $number) {
 	if ($guess > $number) {
 	  fwrite(STDOUT, "LOWER\n");
