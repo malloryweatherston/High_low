@@ -1,11 +1,14 @@
 <?php
 
-//computer picks random number between 1 and 100
-if ($argc == 3) {
-	echo "Please guess a number between $argv[1] and $argv[2] .";
-
+if (!is_numeric($argv[1]) || !is_numeric($argv[2])) {
+	echo "I have no idea what you're talking about!\n";
+	exit(1);
 }
+//computer picks random number between 1 and 100
 
+if ($argc == 3) {
+ echo "Please guess a number between $argv[1] and $argv[2]";
+}
 
 $number = rand ($argv[1], $argv[2]); 
 
