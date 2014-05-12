@@ -3,6 +3,9 @@
 //computer picks random number between 1 and 100
 $number = rand (1 , 100); 
 
+//counter variable
+$number_of_guesses = 1;
+
 //Ask user to guess a number between 1 and 100
 fwrite(STDOUT, 'Guess a number between 1 and 100');
 
@@ -18,10 +21,11 @@ while ($guess != $number) {
 } elseif ($guess < $number) {
 	  fwrite(STDOUT, "HIGHER\n");
 	  $guess = fgets(STDIN); 
- }
-}
-fwrite(STDOUT, "GOOD GUESS!\n");
 
+ }
+ $number_of_guesses++;
+}
+fwrite(STDOUT, "GOOD GUESS! You guessed correctly in $number_of_guesses guesses!\n");
 
 
 
